@@ -4,7 +4,7 @@ import axios from "axios";
 import { FaPlus, FaList, FaChartPie, FaInfoCircle } from "react-icons/fa";
 import "../styles/styles.css";
 
-const Dashboard = () => {
+const DashboardHome = () => {
   const navigate = useNavigate();
   const [stocks, setStocks] = useState([]);
 
@@ -100,4 +100,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default DashboardHome;
