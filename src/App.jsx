@@ -5,8 +5,9 @@ import Register from "./pages/Register";
 import DashboardLayout from "./pages/DashboardLayout";
 import Dashboard from "./pages/Dashboard";
 import StockList from "./pages/StockList";
+import AddStock from "./pages/AddStock"; // <-- added
 import About from "./pages/AboutUs";
-import Reports from "./pages/Reports"; // Add this if you created Reports.jsx
+import Reports from "./pages/Reports";
 
 function App() {
   return (
@@ -20,8 +21,9 @@ function App() {
         <Route path="/dashboard" element={<DashboardLayout />}>
           <Route index element={<Dashboard />} />
           <Route path="stocks" element={<StockList />} />
+          <Route path="addstock" element={<AddStock />} /> {/* <-- added */}
           <Route path="about" element={<About />} />
-          <Route path="reports" element={<Reports />} /> {/* Optional */}
+          <Route path="reports" element={<Reports />} />
         </Route>
 
         {/* Default route → redirect to login */}

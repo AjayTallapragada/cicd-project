@@ -60,7 +60,7 @@ const Dashboard = () => {
           <FaInfoCircle /> About
         </button>
         {/* Placeholder for Chart page */}
-        <button className="primary" onClick={() => alert("Reports not implemented yet")}>
+        <button className="primary" onClick={() => navigate("/dashboard/reports")}>
           <FaChartPie /> Reports
         </button>
       </div>

@@ -7,6 +7,7 @@ const Register = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [phone, setPhone] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -42,6 +43,14 @@ const Register = () => {
           onChange={(e) => setName(e.target.value)}
           required
         />
+        <input
+  type="text"
+  value={phone}
+  onChange={(e) => setPhone(e.target.value)}
+  required
+  placeholder="Enter your phone number"
+/>
+
         <input
           type="email"
           placeholder="Email"

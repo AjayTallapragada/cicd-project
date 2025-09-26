@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import "../styles/styles.css";
 
 const DashboardLayout = () => {
   const navigate = useNavigate();
+
+  // Login check
+  useEffect(() => {
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+    if (!isLoggedIn) {
+      navigate("/login");
+    }
+  }, [navigate]);
 
   const handleLogout = () => {
     localStorage.removeItem("isLoggedIn");
@@ -12,7 +20,6 @@ const DashboardLayout = () => {
 
   return (
     <div style={{ display: "flex", minHeight: "100vh" }}>
-      
       {/* Sidebar */}
       <div className="sidebar">
         <h2>Inventory</h2>
