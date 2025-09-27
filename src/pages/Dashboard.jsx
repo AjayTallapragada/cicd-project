@@ -10,7 +10,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:2207/api/stock")
+      .get("http://localhost:2501/api/stock")
       .then((res) => setStocks(res.data))
       .catch((err) => console.error("Error fetching stock:", err));
   }, []);

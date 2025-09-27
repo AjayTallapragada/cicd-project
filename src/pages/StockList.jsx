@@ -9,14 +9,14 @@ const StockList = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get("http://localhost:2207/api/stock")
+    axios.get("http://localhost:2501/api/stock")
       .then(res => setItems(res.data))
       .catch(err => console.error("Error fetching stock:", err));
   }, []);
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:2207/api/stock/${id}`);
+      await axios.delete(`http://localhost:2501/api/stock/${id}`);
       alert("Item Deleted Successfully");
       setItems(items.filter(item => item.id !== id));
     } catch (err) {

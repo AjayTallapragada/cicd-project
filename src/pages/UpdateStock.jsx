@@ -12,7 +12,7 @@ const AddStock = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:2207/api/stock', { name, quantity, price });
+      await axios.post('http://localhost:2501/api/stock', { name, quantity, price });
       alert("Item added successfully");
       navigate('/dashboard/stocks');
     } catch (err) {
